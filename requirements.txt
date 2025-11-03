@@ -1,0 +1,5 @@
+numpy
+matplotlib
+plotly>=5
+ipywidgets>=8
+oct2py>=5.5

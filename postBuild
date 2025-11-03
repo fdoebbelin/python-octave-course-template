@@ -1,0 +1,2 @@
+# Aktiviert interaktive Widgets
+jupyter nbextension enable --py widgetsnbextension --sys-prefix

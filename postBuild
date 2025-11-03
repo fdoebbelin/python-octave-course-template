@@ -1,2 +1,1 @@
-# Aktiviert interaktive Widgets
-jupyter nbextension enable --py widgetsnbextension --sys-prefix
+echo "Widgets sind in JupyterLab 4 bereits integriert."

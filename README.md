@@ -9,6 +9,8 @@ Klicke hier, um das Projekt direkt im Browser (ohne Installation) zu öffnen:
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/fdoebbelin/python-octave-course-template/HEAD?labpath=notebooks/01_intro.ipynb)
 
+[![Try JupyterLite](https://img.shields.io/badge/Try-JupyterLite-informational?logo=jupyter&labelColor=F37626)](https://fdoebbelin.github.io/python-octave-course-template/)
+
 ## 📘 Kursinhalte
 
 1. **Einführung in Python & NumPy**  

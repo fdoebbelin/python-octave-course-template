@@ -1,16 +1,28 @@
 name: Deploy JupyterLite to GitHub Pages
 on:
   push:
-    branches: [main]   # oder dein Hauptzweig
+    branches: [main]   # Passe ggf. auf deinen Hauptbranch an!
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
-      - run: pip install jupyterlite jupyterlite-p5-kernel
-      - run: jupyter lite build
-      - uses: peaceiris/actions-gh-pages@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'   # JupyterLite und p5-kernel sind mit Python >=3.8 kompatibel
+
+      - name: Install JupyterLite und p5-kernel
+        run: |
+          pip install jupyterlite jupyterlite-p5-kernel
+
+      - name: Build JupyterLite site
+        run: |
+          jupyter lite build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_output   # oder ./dist je nach jupyter lite Version
+          publish_dir: ./_output   # oder ./dist, je nach JupyterLite Version/Einstellung
